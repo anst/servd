@@ -8,6 +8,13 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var app = express().http().io();
 
+var securenet = require('securenet-node')({
+  securenetid: '8005235',
+  securekey: 'nkEtX61oyqnu'
+});
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -24,8 +31,28 @@ app.use('/', routes);
 
 app.io.on('connection', function (socket) {
 
+  socket.on('payEvent', function (data) {
+    securenet.charge( {
+      amount: data.price,
+      paymentVaultToken: {
+        customerId: '1337',
+        paymentMethodId: '1',
+        paymentType: 'CREDIT_CARD'
+      },
+      developerApplication: {
+        developerId: 12345678,
+        Version: '1.2'
+      }
+    }, function(err, res){
+      if(err){
+        return console.log(err);
+      }
+      console.log(res);
+    });
+    app.io.sockets.emit('paid', data);
+
   socket.on('payEvent', function (from, msg) {
-    app.io.sockets.emit('paid', msg);
+    app.io.sockets.emit('paid');
   });
   socket.on('questionEvent', function (from, msg) {
     app.io.sockets.emit('question');

@@ -51,9 +51,11 @@ body {
 }
 .badge-notify-question {
     background: url(/assets/img/question_badge.png) no-repeat;
+    cursor: pointer;
 }
 .badge-notify-info {
     background: url(/assets/img/info_badge.png) no-repeat;
+    cursor: pointer;
 }
 .badge-notify {
    position:absolute;
@@ -90,5 +92,9 @@ body {
 
 .dropdown {
     display: none;
+}
+
+.uncleared-transactions {
+    opacity: 0;
 }
 

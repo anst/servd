@@ -120,7 +120,9 @@ html.
       $('#pay_u').click(function() {
         //add worldpay integration
 
-        socket.emit('payEvent', {'price': $('#prices').val()});
+
+        socket.emit('payEvent', {price: $('#prices').html()});
+
       });
       $('#question_u').click(function() {
         socket.emit('questionEvent');

@@ -23,27 +23,36 @@ $(window).ready(function(){
 
 	$("#clear-button").click(function(){ //uncleared transactions clear animation
 		$(".uncleared-transactions").stop().animate({"opacity": 0}, 300);
+
 		$("#table-1 img").attr("src", "/assets/img/empty-table.png");
 		$("#table-1 img").css({"width": "140px","vertical-align": "middle"});
 		$("#table-1 h3").text("0 guests");
+
+		$("#table-1-notif").removeClass("badge-notify-pay");
 	});
 
 	$("#seat-button").click(function(){ //seat the unseated clear animation
 		$(".uncleared-waitlist").stop().animate({"opacity": 0}, 300);
 	});
 
+	$("#table-1-notif").click(function(){
+		$(this).removeClass("badge-notify-question");
+		$(this).removeClass("badge-notify-info");
+	});
 
 	socket.on('paid', function(data) {
-		var pricePaid = data.price;
-		//add to table "Table 1" and value
-		//paid button flash
+		var pricePaid = price;
+		$(".uncleared-transactions #debt").text("$" + pricePaid);
+		$(".uncleared-transactions").css("opacity","1");
+
+		$("#table-1-notif").addClass("badge-notify-pay");
 	});
 
 	socket.on('question', function(data) {
-		//question button flash
+		$("#table-1-notif").addClass("badge-notify-question");
 	});
 
 	socket.on('info', function(data) {
-		//info button flash
+		$("#table-1-notif").addClass("badge-notify-info");
 	});
 });
