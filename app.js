@@ -49,10 +49,7 @@ app.io.on('connection', function (socket) {
       }
       console.log(res);
     });
-    app.io.sockets.emit('paid', data);
-
-  socket.on('payEvent', function (from, msg) {
-    app.io.sockets.emit('paid');
+    app.io.sockets.emit('paid', msg);
   });
   socket.on('questionEvent', function (from, msg) {
     app.io.sockets.emit('question');
