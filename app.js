@@ -25,7 +25,7 @@ app.use('/', routes);
 app.io.on('connection', function (socket) {
 
   socket.on('payEvent', function (from, msg) {
-    app.io.sockets.emit('paid', msg);
+    app.io.sockets.emit('paid');
   });
   socket.on('questionEvent', function (from, msg) {
     app.io.sockets.emit('question');
