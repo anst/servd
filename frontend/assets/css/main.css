@@ -42,6 +42,9 @@ body {
     border-radius: 80px;
     background: #E2DED0;
     border: 5px solid #C9C6B9;
+    padding: 20px;
+    position: relative;
+    cursor:pointer;
 }
 .badge-notify-pay {
     background: url(/assets/img/pay_badge.png) no-repeat;
@@ -61,6 +64,7 @@ body {
     width:90px;
     height:90px;
     background-clip: border-box;
+    animation-iteration-count: infinite;
 }
 .badge-notify-plain {
     padding:10px;
@@ -68,6 +72,17 @@ body {
     width:80px;
     height:80px;
     margin-right:20px;
+}
+.servd-guests {
+   color: rgba(0,0,0,0.2);
+   text-align: center;
+}
+.servd-panel-hr {
+    width:100%;
+    height:4px;
+    border-radius:4px;
+    background: rgba(0,0,0,0.15);
+    margin-top: 20px;
 }
 .clearfix {
     clear:both;
