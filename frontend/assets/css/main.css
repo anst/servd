@@ -10,6 +10,14 @@ body {
 .servd-table {
     width: 390px;
 }
+.servd-panel-danger {
+    background: #FF8F5E !important;
+    color: white !important;
+    border-top-right-radius: 11px;
+    border-top-left-radius: 11px;
+}
+.servd-panel-border { box-sizing: border-box; border-radius: 15px; border: solid 3px #FF8F5E; }
+
 .servd-panel {
     background: transparent;
     border:none;
@@ -53,5 +61,15 @@ body {
     width:90px;
     height:90px;
     background-clip: border-box;
+}
+.badge-notify-plain {
+    padding:10px;
+    background-size: 80px;
+    width:80px;
+    height:80px;
+    margin-right:20px;
+}
+.clearfix {
+    clear:both;
 }
 

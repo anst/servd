@@ -13,6 +13,7 @@
     <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/ct-paper.css" rel="stylesheet"/>
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -39,50 +40,73 @@
 </nav>
 
 <!-- top half -->
-<div class="row" style="width: 75%; margin: 0 auto">
-  <div class="waiter-stuff">
-    <div class="left-buttons">
-      <a id="exclamation" href="#"></a>
-      <a id="question" href="#"></a>
-      <a id="MONEY2020" href="#"></a>
-    </div>
-    <div class="waiter-info-container">
-      <div class="photo-container">
-        <div class="photo"></div>
-      </div>
-      <h3 class="waiter-name"></h3>
-    </div>
-    <div class="message-container">
-      <textarea class="message-box" placeholder="Send a message"></textarea>
-      <div class="send-button"></div>
-    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12"><h3>Your Visit</h3>
+    <hr></div>
   </div>
-</div>
-
+  <div class="row row-fluid" >
+      <div class="col-sm-4 ">
+          <div >
+            <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-pay">&nbsp;</div></div>
+            <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-question">&nbsp;</div></div>
+            <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-info">&nbsp;</div></div>
+            <br><br>
+            <br><br><br>
+            <br>
+          </div>
+      </div>
+      <div class="col-sm-3">
+          <div class="waiter-info-container">
+          <div class="photo-container">
+            <div class="photo">
+              <img src="assets/img/DK.png"  alt="Thumbnail Image" class="img-thumbnail img-responsive"><br>
+              <div style="text-align:center"><b>Daniel Kermany</b></div>
+            </div>
+          </div>
+          <h3 class="waiter-name"></h3>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="form-group ">
+          <textarea class="message-box form-control" rows=6 style="border: 5px solid rgba(0,0,0,0.1) !important;" placeholder="Type a message"></textarea></div>
+          <button class="btn btn-fill btn-danger" style="width:100%">Send a message</button>
+        <br>
+        <div class="send-button"></div>
+      </div>
+  </div>
+<br><br>
 <!-- bottom half -->
-<div class="row" style="width: 75%; margin: 0 auto">
-  <table style="width:75%">
+<div class="row">
+  <div class="col-sm-12"><table class="table table-bordered table-striped">
   <tr>
     <th>Name</th>
-    <th>Orders</th> 
-    <th>Prices</th>
+    <th>Order</th>
+    <th>Price</th>
   </tr>
   <tr>
     <td>Daniel Kermany</td>
-    <td>Fish sticks</td> 
+    <td>Fish sticks</td>
     <td>$94</td>
   </tr>
   <tr>
     <td>Gun(slinger)lan Karun</td>
-    <td>Not Curry</td> 
+    <td>Not Curry</td>
     <td>$94</td>
   </tr>
   <tr>
     <td>Andrew Sturz</td>
-    <td>Blood</td> 
+    <td>Blood</td>
     <td>$94</td>
   </tr>
-</table>
+</table></div>
+</div>
+
+<hr>
+
+<center>&copy; servd 2015</center>
+
+<br>
 </div>
 
 

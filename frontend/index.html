@@ -13,6 +13,7 @@
     <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/ct-paper.css" rel="stylesheet"/>
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -38,7 +39,7 @@
           <span class="btn btn-danger btn-simple active">Table Management</span>
       </li>
       <li>
-          <span class="btn btn-danger btn-simple ">Edit Resteraunt Menu</span>
+          <span class="btn btn-danger btn-simple ">Edit Restaurant Menu</span>
       </li>
       <li>
           <span class="btn btn-danger btn-simple ">Customer Management</span>
@@ -56,13 +57,57 @@
 
 
 <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-danger servd-panel-border">
+        <div class="panel-heading servd-panel-danger">Customers waiting to be seated:</div>
+        <div class="panel-body">
+          <table class="table " >
+            <tr >
+              <td width=80%>Name</td>
+              <td width=20%>–</td>
+            </tr>
+            <tr>
+              <td><h6>Andy Sturzu</h6></td>
+              <td>
+                <button href="#" class="btn btn-fill btn-success" style="width:100%"><i class="fa fa-check"></i>Seat</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-danger servd-panel-border">
+        <div class="panel-heading servd-panel-danger">Uncleared Transactions:</div>
+        <div class="panel-body">
+          <table class="table " >
+            <tr >
+              <td width=50%>Table</td>
+              <td width=30%>Amount</td>
+              <td width=20%>–</td>
+            </tr>
+            <tr>
+              <td><h6>Table 1</h6></td>
+              <td><h6>$39.49</h6></td>
+              <td>
+                <button href="#" class="btn btn-fill btn-success" style="width:100%"><i class="fa fa-check"></i>Clear</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <br>
   <div class="row servd-row">
     <div class="col-sm-3 servd-table">
 
       <div class="panel panel-default servd-panel">
 
         <div class="panel-body servd-panel-body">
-        <div class="badge-notify badge-notify-pay ">&nbsp;</div>
+        <div class="badge-notify badge-notify-pay animated tada">&nbsp;</div>
 
           <div class="servd-table-bg">
             <!-- asdf -->
@@ -74,7 +119,7 @@
     <div class="col-sm-3 servd-table">
       <div class="panel panel-default servd-panel">
         <div class="panel-body servd-panel-body">
-        <div class="badge-notify badge-notify-question ">&nbsp;</div>
+        <div class="badge-notify badge-notify-question animated tada">&nbsp;</div>
           <div class="servd-table-bg">
             <!-- asdf -->
           </div>
@@ -85,7 +130,7 @@
     <div class="col-sm-3 servd-table">
       <div class="panel panel-default servd-panel">
         <div class="panel-body servd-panel-body">
-        <div class="badge-notify badge-notify-info ">&nbsp;</div>
+        <div class="badge-notify badge-notify-info animated tada">&nbsp;</div>
           <div class="servd-table-bg">
             <!-- asdf -->
           </div>
