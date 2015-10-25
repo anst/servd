@@ -1,8 +1,14 @@
 body {
     background: #f4f3ef;
 }
+.servd-row {
+    margin-bottom: 30px;
+}
+.servd-row:first-child {
+    margin-top: 50px;
+}
 .servd-table {
-
+    width: 390px;
 }
 .servd-panel {
     background: transparent;
@@ -11,14 +17,41 @@ body {
 .servd-panel-body {
     border-radius: 80px;
 
-    padding:30px;
-    min-height:300px;
+    padding:50px;
+
     background: #FAF9F8;
-    border: 10px solid #D7D6D5;
+    border: 5px solid #D7D6D5;
+    margin-bottom: 35px;
 }
 .servd-panel-footer {
     background: transparent;
     border:none;
-    font-size:24px;
+    font-size:36px;
     text-align:center;
 }
+.servd-table-bg {
+    height: 240px;
+    border-radius: 80px;
+    background: #E2DED0;
+    border: 5px solid #C9C6B9;
+}
+.badge-notify-pay {
+    background: url(/assets/img/pay_badge.png) no-repeat;
+}
+.badge-notify-question {
+    background: url(/assets/img/question_badge.png) no-repeat;
+}
+.badge-notify-info {
+    background: url(/assets/img/info_badge.png) no-repeat;
+}
+.badge-notify {
+   position:absolute;
+   top: -5px;
+   right: -5px;
+   text-align: right;
+    background-size: 90px;
+    width:90px;
+    height:90px;
+    background-clip: border-box;
+}
+
