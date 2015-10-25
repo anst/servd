@@ -22,6 +22,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
+app.io.on('connection', function (socket) {
+
+  socket.on('payEvent', function (from, msg) {
+    app.io.sockets.emit('paid', msg);
+  });
+  socket.on('questionEvent', function (from, msg) {
+    app.io.sockets.emit('question');
+  });
+  socket.on('infoEvent', function (from, msg) {
+    app.io.sockets.emit('info');
+  });
+  socket.on('disconnect', function () {
+    app.io.emit('user disconnected');
+  });
+
+  socket.on('chargeEvent', function (data) {
+    app.io.sockets.emit('chargeEvent', data);
+  });
+});
+
 app.post('/messages', function(req, res) {
   app.io.broadcast('loc', req.body.Body);
   console.log(req.body.Body);

@@ -1,5 +1,6 @@
 $(window).ready(function(){
 	var price = 0;
+	var socket = io.connect();
 
 	$(".servd-table-bg").click(function(){ //open and collapse tables
 		if(!$(this).hasClass("clicked")){
@@ -15,6 +16,9 @@ $(window).ready(function(){
 	$("#set-price").click(function(){ //submit entered price to local variable price
 		price = $(".form-control").val();
 		$(".form-control").val("");
+		$("#tohide").fadeOut(300);
+
+		socket.emit('chargeEvent', {'price': price});
 	});
 
 	$("#clear-button").click(function(){ //uncleared transactions clear animation
@@ -26,5 +30,20 @@ $(window).ready(function(){
 
 	$("#seat-button").click(function(){ //seat the unseated clear animation
 		$(".uncleared-waitlist").stop().animate({"opacity": 0}, 300);
+	});
+
+
+	socket.on('paid', function(data) {
+		var pricePaid = data.price;
+		//add to table "Table 1" and value
+		//paid button flash
+	});
+
+	socket.on('question', function(data) {
+		//question button flash
+	});
+
+	socket.on('info', function(data) {
+		//info button flash
 	});
 });

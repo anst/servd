@@ -87,7 +87,7 @@ html.
     <tr>
       <td>Daniel Kermany</td>
       <td>Food</td>
-      <td>$38.98</td>
+      <td id="prices">N/A</td>
     </tr>
   </table></div>
   </div>
@@ -119,9 +119,21 @@ html.
       var socket = io.connect();
       $('#pay_u').click(function() {
         //add worldpay integration
-        alert("ROFLMAOS")
-        socket.emit('payEvent');
+
+        socket.emit('payEvent', {'price': $('#prices').val()});
       });
+      $('#question_u').click(function() {
+        socket.emit('questionEvent');
+      });
+      $('#info_u').click(function() {
+        socket.emit('infoEvent');
+      });
+
+      socket.on('chargeEvent', function(data) {
+        $('#prices').text(data.price);
+      });
+
+
 
     </script>
 
