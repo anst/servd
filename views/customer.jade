@@ -48,9 +48,9 @@ html.
     <div class="row row-fluid" >
         <div class="col-sm-4 ">
             <div >
-              <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-pay">&nbsp;</div></div>
-              <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-question">&nbsp;</div></div>
-              <div style="float: left; width:33%"><div class="badge-notify-plain badge-notify-info">&nbsp;</div></div>
+              <div style="float: left; width:33%;cursor:pointer"><div class="badge-notify-plain badge-notify-pay" id="pay_u">&nbsp;</div></div>
+              <div style="float: left; width:33%;cursor:pointer"><div class="badge-notify-plain badge-notify-question" id="question_u">&nbsp;</div></div>
+              <div style="float: left; width:33%;cursor:pointer"><div class="badge-notify-plain badge-notify-info" id="info_u">&nbsp;</div></div>
               <br><br>
               <br><br><br>
               <br>
@@ -114,4 +114,14 @@ html.
   	<script src="/assets/js/bootstrap-select.js"></script>
   	<script src="/assets/js/bootstrap-datepicker.js"></script>
   	<script src="/assets/js/ct-paper.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      var socket = io.connect();
+      $('#pay_u').click(function() {
+        //add worldpay integration
+        alert("ROFLMAOS")
+        socket.emit('payEvent');
+      });
+
+    </script>
 
