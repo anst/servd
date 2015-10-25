@@ -27,18 +27,39 @@ $(window).ready(function(){
 		$("#table-1 img").attr("src", "/assets/img/empty-table.png");
 		$("#table-1 img").css({"width": "140px","vertical-align": "middle"});
 		$("#table-1 h3").text("0 guests");
-
+		$("#dropdown").hide();
 		$("#table-1-notif").removeClass("badge-notify-pay");
+
 	});
 
 	$("#seat-button").click(function(){ //seat the unseated clear animation
 		$(".uncleared-waitlist").stop().animate({"opacity": 0}, 300);
+
+		$("#table-1 h3").text("1 guest");
+		$("#table-1 img").attr("src", function(){
+			return "/assets/img/plate-closed.png";
+		});
+		$("#table-1 img").css("width", "200px");
+
 	});
 
 	$("#table-1-notif").click(function(){
 		$(this).removeClass("badge-notify-question");
 		$(this).removeClass("badge-notify-info");
 	});
+
+	$("#served-1").click(function(){
+		$("#table-1 img").attr("src", function(){
+			return "/assets/img/plate-open.png";
+		});
+		$(this).hide();
+	});
+
+	$("#reda").click(function() {
+		$("#table-1-notif").removeClass("badge-notify-question");
+		$("#table-1-notif").removeClass("badge-notify-info");
+	});
+
 
 	socket.on('paid', function(data) {
 		var pricePaid = price;
