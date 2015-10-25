@@ -1,1 +1,1 @@
-Vegas, baby.
+Vegas, baby, Vegas!
