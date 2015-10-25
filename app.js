@@ -26,7 +26,7 @@ app.post('/messages', function(req, res) {
   app.io.broadcast('loc', req.body.Body);
   console.log(req.body.Body);
 });
-x
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

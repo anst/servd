@@ -88,3 +88,7 @@ body {
     clear:both;
 }
 
+.dropdown {
+    display: none;
+}
+
