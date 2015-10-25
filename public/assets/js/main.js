@@ -19,6 +19,9 @@ $(window).ready(function(){
 
 	$("#clear-button").click(function(){ //uncleared transactions clear animation
 		$(".uncleared-transactions").stop().animate({"opacity": 0}, 300);
+		$("#table-1 img").attr("src", "/assets/img/empty-table.png");
+		$("#table-1 img").css({"width": "140px","vertical-align": "middle"});
+		$("#table-1 h3").text("0 guests");
 	});
 
 	$("#seat-button").click(function(){ //seat the unseated clear animation
