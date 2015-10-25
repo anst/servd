@@ -1,3 +1,24 @@
 body {
     background: #f4f3ef;
 }
+.servd-table {
+
+}
+.servd-panel {
+    background: transparent;
+    border:none;
+}
+.servd-panel-body {
+    border-radius: 80px;
+
+    padding:30px;
+    min-height:300px;
+    background: #FAF9F8;
+    border: 10px solid #D7D6D5;
+}
+.servd-panel-footer {
+    background: transparent;
+    border:none;
+    font-size:24px;
+    text-align:center;
+}
